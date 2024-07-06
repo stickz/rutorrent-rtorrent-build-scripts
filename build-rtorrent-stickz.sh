@@ -25,14 +25,14 @@ cd ~/build && git clone https://github.com/stickz/rtorrent/
 cd ~/build/rtorrent/libtorrent
 ./autogen.sh
 ./configure --prefix=/usr --enable-aligned
-make -j$(nproc) CXXFLAGS="-O3 -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
+make -j$(nproc) CXXFLAGS="-O3 -march=native -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
 make install
 
 # Build and install rtorrent
 cd ~/build/rtorrent/rtorrent
 ./autogen.sh
 ./configure --prefix=/usr --with-xmlrpc-c
-make -j$(nproc) CXXFLAGS="-O3 -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
+make -j$(nproc) CXXFLAGS="-O3 -march=native -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
 make install
 
 # Remove build directory
