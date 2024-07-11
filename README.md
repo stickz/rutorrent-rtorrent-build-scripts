@@ -13,3 +13,6 @@ How to build [rtorrent stickz](https://github.com/stickz/rtorrent):
 chmod +x build-rtorrent-stickz.sh
 ./build-rtorrent-stickz.sh
 ```
+chmod +x  rtorrent-install.sh
+./rtorrent-install.sh
+```
