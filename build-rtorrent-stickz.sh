@@ -24,7 +24,7 @@ cd ~/build && git clone https://github.com/stickz/rtorrent/
 # Build and install libtorrent
 cd ~/build/rtorrent/libtorrent
 ./autogen.sh
-./configure --prefix=/usr --enable-aligned --enable-hosted-mode --disable-instrumentation --enable-udns
+./configure --prefix=/usr --enable-aligned --enable-hosted-mode --enable-udns
 make -j$(nproc) CXXFLAGS="-O3 -march=native -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
 make install
 
