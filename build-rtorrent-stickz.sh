@@ -25,14 +25,14 @@ cd ~/build && git clone https://github.com/stickz/rtorrent/
 cd ~/build/rtorrent/libtorrent
 ./autogen.sh
 ./configure --prefix=/usr --enable-aligned --enable-hosted-mode --enable-udns
-make -j$(nproc) CXXFLAGS="-O3 -march=native"
+make -j$(nproc) CXXFLAGS="-O3"
 make install
 
 # Build and install rtorrent
 cd ~/build/rtorrent/rtorrent
 ./autogen.sh
 ./configure --prefix=/usr --with-xmlrpc-c
-make -j$(nproc) CXXFLAGS="-O3 -march=native"
+make -j$(nproc) CXXFLAGS="-O3"
 make install
 
 # Remove build directory
