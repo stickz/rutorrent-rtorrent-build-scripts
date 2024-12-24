@@ -11,13 +11,6 @@ cd libudns
 make -j$(nproc) CFLAGS="-O3 -fPIC"
 make -j$(nproc) install
 
-# Build and install xmlrpc-c
-cd ~/build && svn checkout svn://svn.code.sf.net/p/xmlrpc-c/code/super_stable
-cd super_stable
-./configure --prefix=/usr --disable-cplusplus --disable-wininet-client --disable-libwww-client --disable-abyss-server --disable-cgi-server
-make -j$(nproc) CFLAGS="-O3"
-make install
-
 # Clone libtorrent & rtorrent stickz repo
 cd ~/build && git clone https://github.com/stickz/rtorrent/
 
