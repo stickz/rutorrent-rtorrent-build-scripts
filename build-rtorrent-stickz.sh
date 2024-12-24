@@ -31,7 +31,7 @@ make install
 # Build and install rtorrent
 cd ~/build/rtorrent/rtorrent
 ./autogen.sh
-./configure --prefix=/usr --with-xmlrpc-c
+./configure --prefix=/usr --with-xmlrpc-tinyxml2
 make -j$(nproc) CXXFLAGS="-O3 -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
 make install
 
