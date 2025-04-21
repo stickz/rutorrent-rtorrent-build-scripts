@@ -9,7 +9,7 @@ git clone https://github.com/rakshasa/libtorrent
 cd ~/build/libtorrent
 autoreconf -vfi
 ./configure --prefix=/usr --enable-aligned
-make -j$(nproc) CXXFLAGS="-O3 -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
+make -j$(nproc) CXXFLAGS="-g"
 make install
 
 # Build and install rtorrent
@@ -18,7 +18,7 @@ git clone https://github.com/rakshasa/rtorrent
 cd ~/build/rtorrent
 autoreconf -vfi
 ./configure --prefix=/usr --with-xmlrpc-tinyxml2
-make -j$(nproc) CXXFLAGS="-O3 -flto=\"$(nproc)\" -Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
+make -j$(nproc) CXXFLAGS="-g"
 make install
 
 # Remove build directory
