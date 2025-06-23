@@ -13,3 +13,9 @@ How to build [rtorrent stickz](https://github.com/stickz/rtorrent):
 chmod +x build-rtorrent-stickz.sh
 ./build-rtorrent-stickz.sh
 ```
+
+How to build [rtorrent rakshasa](https://github.com/rakshasa/rtorrent):
+```
+chmod +x build-rtorrent-rakshasa-stable.sh
+./build-rtorrent-rakshasa-stable.sh
+```
